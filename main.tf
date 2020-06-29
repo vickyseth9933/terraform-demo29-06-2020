@@ -1,3 +1,4 @@
+###PROVIDER ADDED
 provider "aws" {
   version = "~> 2.0"
   region = var.region
@@ -5,8 +6,11 @@ provider "aws" {
   secret_key = ""
 }
 
+###DATA SOURCE ADDED
 data "aws_availability_zones" "azs" {}
 
+
+###MOUDLE VPC 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.44.0"
